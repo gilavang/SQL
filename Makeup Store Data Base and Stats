@@ -1,0 +1,36 @@
+--Create a makeup store database
+
+CREATE TABLE store (id INTEGER PRIMARY KEY, name TEXT, price INTEGER, quantity INTEGER, popularity INTEGER);
+
+INSERT INTO Makeup VALUES (1, "Lipstick", 15.99, 20, 80);
+INSERT INTO Makeup VALUES (2, "Lip Gloss", 20,10, 75);
+INSERT INTO Makeup VALUES (3, "Lip Liner", 10.50, 7, 73);
+INSERT INTO Makeup VALUES (4, "Eyeshadow", 17.99, 13, 54);
+INSERT INTO Makeup VALUES (5, "Concealer", 8, 25, 65);
+INSERT INTO Makeup VALUES (6, "Brow Powder", 10, 8, 43);
+INSERT INTO Makeup VALUES (7, "Face Powder", 9.50, 12, 27);
+INSERT INTO Makeup VALUES (8, "Contour", 15, 18, 87);
+INSERT INTO Makeup VALUES (9, "Eyeliner", 30, 9, 95);
+INSERT INTO Makeup VALUES (10, "Highlight", 12.75, 15, 25);
+INSERT INTO Makeup VALUES (11, "Blush", 25, 24, 33);
+INSERT INTO Makeup VALUES (12, "Foundation", 40, 10, 97); 
+INSERT INTO Makeup VALUES (13, "Mascara", 20, 13, 78);
+INSERT INTO Makeup VALUES (14, "Primer", 11.99, 17, 56);
+INSERT INTO Makeup VALUES (15, "Bronzer", 5.99, 20, 35);
+
+--display the database ordered by price. 
+SELECT * FROM store
+ORDER BY price desc; 
+
+--what is the avg price of items?
+SELECT AVG(price)
+FROM store
+WHERE price;
+
+--what are the most 5 popular items? 
+SELECT item, price, popularity
+FROM store
+ORDER BY popularity desc
+limit 5; 
+
+
